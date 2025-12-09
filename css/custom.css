@@ -1,0 +1,9 @@
+.btn-custom-heart {
+    /* You can customize these button styles further */
+}
+
+.btn-custom-heart .heart {
+    color: red;
+    font-style: normal; /* In case a parent element has italic style */
+    margin: 0 4px;
+}
