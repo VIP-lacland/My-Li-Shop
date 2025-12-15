@@ -1,20 +1,37 @@
 <?php
-	require_once('../model/connect.php');
+session_start();
+require_once('../model/connect.php');
 
-	if (isset($_GET['error'])) {
-		$error = "Vui lòng kiểm tra lại tài khoản hoặc mật khẩu của bạn!";
-	}
-	else {
-		$error = "";
-	}
+// Xử lý thông báo lỗi/success từ session
+if (isset($_SESSION['register_errors'])) {
+    $register_error = implode('<br>', $_SESSION['register_errors']);
+    unset($_SESSION['register_errors']);
+} else {
+    $register_error = '';
+}
 
-	if (isset($_GET['rs'])) {
-		echo "<script type=\"text/javascript\">alert(\"Bạn đã đăng ký thành công!\");</script>";
-		echo "<script type=\"text/javascript\">alert(\"Vui lòng đăng nhập để mua hàng!\");</script>";
-	}
-	if (isset($_GET['rf'])) {
-		echo "<script type=\"text/javascript\">alert(\"Đăng ký thất bại!\");</script>";
-	}
+if (isset($_SESSION['register_success'])) {
+    $register_success = $_SESSION['register_success'];
+    unset($_SESSION['register_success']);
+} else {
+    $register_success = '';
+}
+
+// Xử lý thông báo lỗi đăng nhập từ URL parameter
+if (isset($_GET['error'])) {
+    $login_error = "Vui lòng kiểm tra lại tài khoản hoặc mật khẩu của bạn!";
+} else {
+    $login_error = "";
+}
+
+// Xử lý thông báo thành công từ URL parameter
+if (isset($_GET['rs'])) {
+    $rs_message = "success";
+}
+
+if (isset($_GET['rf'])) {
+    $rf_message = "fail";
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +49,22 @@
     <script src='../js/wow.js'></script>
     <script type="text/javascript" src="../js/mylishop.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        // Hiển thị thông báo từ session
+        $(document).ready(function() {
+            <?php if (!empty($register_success)): ?>
+                alert('<?php echo $register_success; ?>');
+            <?php endif; ?>
+            
+            <?php if (!empty($register_error)): ?>
+                alert('<?php echo addslashes($register_error); ?>');
+            <?php endif; ?>
+            
+            <?php if (isset($rf_message) && $rf_message == 'fail'): ?>
+                alert('Đăng ký thất bại!');
+            <?php endif; ?>
+        });
+    </script>
 </head>
 <body>
 	<!-- header -->
@@ -150,7 +183,9 @@
 				<div class="panel panel-danger">
 					<div class="panel-heading">
 						<center><h4><strong> ĐĂNG NHẬP VÀO TÀI KHOẢN </strong></h4></center>
-						<p style="color: red;"><?php echo $error; ?></p>
+						<?php if (!empty($login_error)): ?>
+							<p style="color: red; text-align: center;"><?php echo $login_error; ?></p>
+						<?php endif; ?>
 					</div><!-- /panel-heading -->
 
 					<div class="panel-body">
@@ -182,7 +217,7 @@
 					</div><!-- /panel-body -->
 
 					<div class="panel-footer">
-						<p>Nếu bạn chưa có tài khoản. Vui lòng <a href="register.php" onclick=""> Đăng ký </a></p>
+						<p>Nếu bạn chưa có tài khoản. Vui lòng <a href="register.php"> Đăng ký </a></p>
 					</div><!-- /panel-footer -->
 
 				</div><!-- /panel-danger -->
