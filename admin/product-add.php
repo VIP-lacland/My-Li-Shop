@@ -1,5 +1,5 @@
 <?php
-require_once('../model/header.php');
+require_once('../admin/headeradmin.php');
 require_once('../model/connect.php');
 
 // Fetch categories
@@ -23,6 +23,91 @@ try {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Thêm sản phẩm</title>
+    <style>
+/* Reset margin/padding */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page wrapper */
+#page-wrapper {
+    padding: 30px 15px;
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* Header */
+.page-header {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form container */
+.form-container {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Form labels */
+.form-group label {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 4px;
+    height: 42px;
+    font-size: 14px;
+}
+
+/* Textarea */
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Buttons */
+.btn-lg {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Margin bottom for all form-groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Responsive spacing for row inputs (price & sale price) */
+.row > .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* File input */
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Optional: hover effect for buttons */
+.btn-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-default:hover {
+    background-color: #e6e6e6;
+    border-color: #ccc;
+}
+</style>
+
 </head>
 <body>
 <!-- Page Content -->

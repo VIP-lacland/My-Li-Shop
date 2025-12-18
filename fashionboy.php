@@ -26,7 +26,7 @@
 </head>
 <body>
     <!-- ... phần body đầu giữ nguyên ... -->
-    
+    <?php include("model/header.php"); ?>
     <!-- background -->
     <div class="container-fluid">
         <div id="bg">

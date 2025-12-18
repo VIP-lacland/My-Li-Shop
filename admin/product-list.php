@@ -90,7 +90,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     $rows = [];
                 }
 
-                $stt = 1; // Initialize counter for serial number
+                $stt = 1;
                 if (!empty($rows)) {
                     foreach ($rows as $row) {
 

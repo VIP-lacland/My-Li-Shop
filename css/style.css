@@ -498,3 +498,106 @@ fieldset {
 .back-to-top i {
     padding: 10px;
 }
+
+/* Reset nhẹ */
+body {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Căn form giữa màn hình */
+.c {
+    margin-top: 60px;
+}
+
+/* Panel register */
+.register {
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Header */
+.register .panel-heading {
+    background: #d9534f;
+    color: #fff;
+    border-bottom: none;
+}
+
+.register .panel-heading h4 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Body */
+.register .panel-body {
+    background: #fff;
+    padding: 30px 25px;
+}
+
+/* Khoảng cách các input */
+.separator .form-group {
+    margin-bottom: 18px;
+}
+
+/* Input group */
+.input-group-addon {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    color: #d9534f;
+}
+
+.form-control {
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.15);
+}
+
+/* Password row */
+@media (max-width: 767px) {
+    .register .panel-body .row .col-sm-6 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Button submit */
+.btSubmit {
+    margin-top: 10px;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+}
+
+.btn-info:hover,
+.btn-info:focus {
+    background: linear-gradient(135deg, #ff5f7e, #ff6fa5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 105, 135, 0.4);
+}
+
+/* Footer */
+.register .panel-footer {
+    background: #fafafa;
+    border-top: none;
+    padding: 20px 10px;
+}
+
+.register .panel-footer img {
+    opacity: 0.9;
+}
+

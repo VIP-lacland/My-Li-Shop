@@ -29,7 +29,6 @@ require_once('model/connect.php');
 <body>
     <!-- button top -->
     <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
-    
     <!-- background -->
     <div class="container-fluid">
         <div id="bg">

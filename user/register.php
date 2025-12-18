@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+    
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6 col-sm-6 col-xs-12 c">

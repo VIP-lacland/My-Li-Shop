@@ -27,7 +27,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'lacvn2468@gmail.com';      // email gửi
-    $mail->Password   = 'xduc eguo venf hrey';         // mật khẩu ứng dụng
+    $mail->Password   = 'fliv slbt xzqq jmcr';         // mật khẩu ứng dụng
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
@@ -37,12 +37,12 @@ try {
 
     // ===== NỘI DUNG EMAIL =====
     $mail->isHTML(true);
-    $mail->Subject = 'Chào mừng bạn đến với MyLiShop của chúng tôi 🎉';
+    $mail->Subject = 'Chào mừng bạn đến với MyLiShop của chúng tôi';
     $mail->Body    = "
-        <h2>Chào $toName 👋</h2>
+        <h2>Chào $toName</h2>
         <p>Tài khoản của bạn đã được tạo thành công.</p>
         <p>Bạn có thể đăng nhập bằng tên đăng nhập: $username và mật khẩu: $password đã đăng ký.</p>
-        <p>Chúc bạn trải nghiệm vui vẻ 😎</p>
+        <p>Chúc bạn trải nghiệm vui vẻ</p>
     ";
     $mail->CharSet = 'UTF-8';
 

@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Function to redirect back to the previous page
 function redirect_back() {
-    // If we need to redirect for an error, we can still use this.
+    // If we need to redirect for an error,.
     $previous_page = $_SERVER['HTTP_REFERER'] ?? 'index.php';
     header("Location: $previous_page");
     exit();

@@ -113,9 +113,6 @@ if (session_status() === PHP_SESSION_NONE) {
 </head>
 
 <body>
-    <!-- button top -->
-    <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
-
     <!-- Header -->
     <?php include 'model/header.php'; ?>
     <!-- /header -->
@@ -128,7 +125,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
         </div>
         
-        <?php include("model/banner.php"); ?>
+        <!-- <?php include("model/banner.php"); ?> -->
         
         <div class="row">
             <div class="row">
@@ -282,5 +279,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <!-- Footer -->
     <?php include("model/footer.php"); ?>
     <!-- /footer -->
+         <!-- button top -->
+    <a href="#" class="back-to-top"><i class="fa fa-arrow-up"></i></a>
 </body>
 </html>
